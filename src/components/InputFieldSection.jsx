@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { MortgageContext } from "./MortgageContext";
 import calculatorImage from "../assets/icon-calculator.svg";
-import CalculatedResultSection from "./CalculatedResultSection";
 
 const InputFieldSection = () => {
   const {
@@ -28,7 +27,7 @@ const InputFieldSection = () => {
   };
 
   return (
-    <div className="border border-green-500 p-4 rounded-t-lg md:p-6 xl:rounded-l-xl xl:rounded-r-none">
+    <div className="p-4 rounded-t-lg md:p-6 xl:rounded-l-xl xl:rounded-r-none">
       {/* title and button container */}
       <div className="md:flex md:justify-between md:items-center">
         <h1 className="font-semibold text-2xl">Mortgage Calculator</h1>
@@ -43,11 +42,11 @@ const InputFieldSection = () => {
       </div>
       {/* form */}
       <form
-        className="border flex flex-col gap-4 my-6 md:grid md:grid-cols-2 md:gap-6"
+        className="flex flex-col gap-4 my-6 md:grid md:grid-cols-2 md:gap-6"
         onSubmit={handleSubmit}
       >
         {/* Mortgage Amount */}
-        <div className="border col-span-2 flex flex-col gap-2">
+        <div className="col-span-2 flex flex-col gap-2">
           <label htmlFor="mortgage-amount" className="text-slate-700">
             Mortgage Amount
           </label>
@@ -73,7 +72,7 @@ const InputFieldSection = () => {
         </div>
 
         {/* Mortgage Term */}
-        <div className="border flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <label htmlFor="mortgage-term" className="text-slate-700">
             Mortgage Term
           </label>
@@ -99,7 +98,7 @@ const InputFieldSection = () => {
         </div>
 
         {/* Interest Rate */}
-        <div className="border flex flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <label htmlFor="interest-rate" className="text-slate-700">
             Interest Rate
           </label>
@@ -125,7 +124,7 @@ const InputFieldSection = () => {
         </div>
 
         {/* Mortgage Type */}
-        <fieldset className="border col-span-2 flex flex-col gap-2">
+        <fieldset className="col-span-2 flex flex-col gap-2">
           <legend className="text-slate-700">Mortgage Type</legend>
           <div className="mt-2 flex flex-col gap-2">
             <div className="flex items-center gap-2 pl-2">
@@ -181,9 +180,6 @@ const InputFieldSection = () => {
           <span className="font-semibold">Calculate Repayments</span>
         </button>
       </form>
-
-      {/* Results Section */}
-      {/* <CalculatedResultSection results={results} /> */}
     </div>
   );
 };
